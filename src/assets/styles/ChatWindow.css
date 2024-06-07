@@ -1,0 +1,18 @@
+.chat-window {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 45vh;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-y: auto;
+  }
+  
+  .messages {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  

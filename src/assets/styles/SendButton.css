@@ -1,0 +1,20 @@
+.send-button {
+    padding: 10px 20px;
+    background-color: #113555;
+    color: white;
+    border-radius: 50%;
+    font-size: 18px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .send-button:hover {
+    background-color: rgb(58, 102, 173);
+  }
+  
