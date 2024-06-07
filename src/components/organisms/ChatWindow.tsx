@@ -1,3 +1,15 @@
+/**
+ * ChatWindow.tsx
+ * 
+ * This file contains the main chat window component for the application.
+ * It imports several other components such as Bubble, ChatInput, TypingIndicator, and ProductCarousel.
+ * It also includes the styles from ChatWindow.css.
+ * 
+ * The file defines two interfaces: Message and Product.
+ * 
+ * @module ChatWindow.tsx
+ */
+
 import React, { useState, useEffect, useRef } from 'react';
 import Bubble from '../atoms/Bubble';
 import ChatInput from '../molecules/ChatInput';
@@ -5,6 +17,12 @@ import TypingIndicator from '../atoms/TypingIndicator';
 import ProductCarousel from '../molecules/ProductCarousel';
 import '../../assets/styles/ChatWindow.css';
 
+/**
+ * Message interface represents a single message in the chat.
+ * It includes the text of the message, a flag indicating if the message is from the user,
+ * an optional flag indicating if the message is a product recommendation,
+ * an optional array of products, and a timestamp.
+ */
 interface Message {
   text: string;
   isUser: boolean;
@@ -13,6 +31,10 @@ interface Message {
   timestamp: string;
 }
 
+/**
+ * Product interface represents a single product.
+ * It includes the id, display title, image URL, price, and URL of the product.
+ */
 interface Product {
   id: string;
   displayTitle: string;
@@ -27,6 +49,7 @@ const ChatWindow: React.FC = () => {
   const month = now.toLocaleString('default', { month: 'long' });
   const day = now.getDate();
   const timestamp = `${timeString} | ${month} ${day}`;
+  
   const [messages, setMessages] = useState<Message[]>([{ text: "Hello there! Do you need any help?", isUser: false, timestamp }]);
   const [currentMessage, setCurrentMessage] = useState<string>('');
   const [isTyping, setIsTyping] = useState<boolean>(false);
