@@ -49,7 +49,7 @@ const ChatWindow: React.FC = () => {
   const month = now.toLocaleString('default', { month: 'long' });
   const day = now.getDate();
   const timestamp = `${timeString} | ${month} ${day}`;
-  
+
   const [messages, setMessages] = useState<Message[]>([{ text: "Hello there! Do you need any help?", isUser: false, timestamp }]);
   const [currentMessage, setCurrentMessage] = useState<string>('');
   const [isTyping, setIsTyping] = useState<boolean>(false);
@@ -75,7 +75,7 @@ const ChatWindow: React.FC = () => {
       setCurrentMessage('');
       setIsTyping(true);
 
-      if (currentMessage.toLowerCase() === 'I want product recommendations') {
+      if (currentMessage.toLowerCase() === 'i want product recommendations') {
         const products = await fetchProducts();
         setTimeout(() => {
           setIsTyping(false);
